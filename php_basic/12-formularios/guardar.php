@@ -1,13 +1,14 @@
 <?php
 $error = "faltan_datos";
 
-if (!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['pass']) && !empty($_POST['edad'])) {
+if (!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['edad']) && !empty($_POST['pass'])) {
     $error = "ok";
 
     $nombre = trim($_POST['name']);
     $email = trim($_POST['email']);
-    $edad = trim((int)$_POST['edad']);
+    $edad = intval($_POST['edad']);
     $pass = $_POST['pass'];
+
 
     if (!is_string($nombre) || preg_match("/[0-9]/", $nombre)) {
         $error = "nombre";
@@ -17,7 +18,7 @@ if (!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['pass']) 
         $error = "email";
     }
 
-    if (!is_int($edad) || !filter_var($edad, FILTER_VALIDATE_INT) || strlen($edad) < 14) {
+    if (!is_int($edad) || !filter_var($edad, FILTER_VALIDATE_INT) || $edad < 14) {
         $error = "edad";
     }
 
@@ -26,6 +27,7 @@ if (!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['pass']) 
     }
 
     // var_dump($_POST);
+    // var_dump($edad);
     // var_dump($error);
     // die();
 } else {
@@ -34,7 +36,10 @@ if (!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['pass']) 
 
 if ($error != "ok") {
     header("Location:index.php?error=$error");
-}
+} 
+if ($error == "ok") {
+    header("Location:index.php?error=$error");
+} 
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -89,7 +89,12 @@
 
     <?php
     session_set_cookie_params(3600); // Establece la sesión para que expire en una hora
+    // Iniciar la sesión
     session_start();
+
+    // Variable de session
+    $_SESSION['variable_persistente'] = "Hola soy una sesión activa";
+    echo $_SESSION['variable_persistente'];
     ?>
 
     <h2>Seguridad de sesión:</h2>

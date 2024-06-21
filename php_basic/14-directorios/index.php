@@ -1,6 +1,7 @@
 <?php
 if (!is_dir('carpeta')) {
     // Crear carpeta
+    // 0777 tiene todos los permisos
     mkdir("carpeta", 0777) or die("No se pudo crear la carpeta");
 } else {
     echo "Ya existe la carpeta";

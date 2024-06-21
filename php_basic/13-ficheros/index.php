@@ -20,8 +20,8 @@
 
 <body>
     <?php
-    /*
     // r = lectura, x = ejecución, w = escritura a+ = permite leer y escribir
+    /*
     $file = fopen("text.txt", "a+"); //Abrir archivo
 
     // Leer contenido, el while es para que lea todas las lineas no solo la primera.

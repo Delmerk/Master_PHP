@@ -3,19 +3,19 @@
 if (isset($_POST['num1']) && isset($_POST['num2'])) {
 
     if (isset($_POST['sumar'])) {
-        $resultado = "El resultado de + " . $_POST['num1'] . " entre " . $_POST['num2'] . " es: " . ($_POST['num1'] + $_POST['num2']);
+        $resultado = "El resultado de sumar " . $_POST['num1'] . " + " . $_POST['num2'] . " es: " . ($_POST['num1'] + $_POST['num2']);
     }
 
     if (isset($_POST['restar'])) {
-        $resultado = "El resultado de - " . $_POST['num1'] . " entre " . $_POST['num2'] . " es: " . ($_POST['num1'] - $_POST['num2']);
+        $resultado = "El resultado de restar " . $_POST['num1'] . " - " . $_POST['num2'] . " es: " . ($_POST['num1'] - $_POST['num2']);
     }
 
     if (isset($_POST['multiplicar'])) {
-        $resultado = "El resultado de * " . $_POST['num1'] . " entre " . $_POST['num2'] . " es: " . ($_POST['num1'] * $_POST['num2']);
+        $resultado = "El resultado de multiplicar " . $_POST['num1'] . " * " . $_POST['num2'] . " es: " . ($_POST['num1'] * $_POST['num2']);
     }
 
     if (isset($_POST['dividir'])) {
-        $resultado = "El resultado de / " . $_POST['num1'] . " entre " . $_POST['num2'] . " es: " . ($_POST['num1'] / $_POST['num2']);
+        $resultado = "El resultado de dividir " . $_POST['num1'] . " / " . $_POST['num2'] . " es: " . ($_POST['num1'] / $_POST['num2']);
     }
 }
 ?>

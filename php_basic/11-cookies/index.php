@@ -21,9 +21,17 @@
 <body>
     <h1>Cookies en PHP:</h1>
     <div>
+        Entonces las cookies al final son un mecanismo por el cual se almacenan datos del usuario en el navegador y en el servidor.
+
+        Todo usuario que visita la web pues se guarda ese tipo de archivo y además se puede rastrear o identificar qué usuario vuelven a la web.
+
+        Una cookie es un fichero que se almacena en el ordenador del usuario que visita la web con el fin de recordar datos o rastrear cierta información o comportamiento del mismo en la web y simplemente en el servidor se guarde una referencia pero casi toda la información se guarda en los ficheros de las cookies del propio navegador web y eso luego se le envía al servidor.
+    </div>
+    <div>
+
         Las cookies son pequeños archivos de texto que se almacenan en el navegador del usuario. PHP te permite crear, leer y eliminar cookies. A diferencia de las sesiones, las cookies se almacenan en el lado del cliente y se pueden utilizar para almacenar datos pequeños y específicos del usuario, como preferencias o información de inicio de sesión. Aquí hay una descripción general de cómo funcionan las cookies en PHP:
     </div>
-    <div>Es un fichero que se almacena en el ordenador del usuario que visita, la web, con el fin de recordar datos o rastrear el comportamiento del mismo en la web. Sirven para persistir información pero la desventaja es que se almacenan en el cliente por ende es menos seguro.</div>
+    <div>La desventaja es que se almacenan en el cliente por ende es menos seguro.</div>
 
     <div>
         1. Configuración de cookies: puedes establecer una cookie utilizando la función setcookie(). Esta función toma varios parámetros, incluido el nombre de la cookie, su valor, su fecha de vencimiento y otros atributos opcionales.
